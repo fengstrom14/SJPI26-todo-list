@@ -1,3 +1,4 @@
+/* Grundläggande styling för sidan */
 body
 {
     background-color: darkseagreen;
@@ -21,7 +22,7 @@ p
     text-align: center;
     line-height: 0.5;
 }
-
+/* Input och huvudknappar */
 #todoInput {
     display: block;
     margin: auto;
@@ -79,7 +80,7 @@ p
     gap: 20px;
 }
 
-
+/* ToDo-listor och text */
 .uncompletedTodo {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -99,7 +100,7 @@ li {
     gap: 5px;
     margin-top: 10px;
 }
-
+/* Complete- och Delete-knappar */
 .statusButton {
     border: none;
     border-radius: 5px;
@@ -125,7 +126,7 @@ li {
 .deleteButton:hover {
     background-color: darkred;
 }
-
+/* Styling för färdiga uppgifter */
 .todoText {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;

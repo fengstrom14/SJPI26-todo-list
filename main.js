@@ -1,6 +1,6 @@
 
 // Variabler
-
+// Hämtar HTML-element som används i ToDo-listan
 const addButton = document.getElementById("addBtn");
 const removeAllButton = document.getElementById("removeAllBtn");
 const todoList = document.getElementById("todoList");
@@ -9,10 +9,12 @@ const completedList = document.getElementById("completedList")
 
 const counterText = document.getElementById("counterText")
 
+// Räknar antalet färdiga uppgifter
 let completeCount = 0;
+// Array som lagrar alla ToDo-uppgifter som objekt
 let listArray = [];
 
-// Funktioner och events
+// Event listeners för knappar, Enter och Remove All
 
 addButton.addEventListener(
     "click",
@@ -35,9 +37,7 @@ removeAllButton.addEventListener("click", function(){
 });
 
 
- // Funktion för att lägga till Todo's, felhantering och att strängen 
- // från input blir tom när man tryck enter
-
+// Lägger till en ny ToDo och kontrollerar att inputfältet inte är tomt
 function addItemTodo(){
 
     const todoText = todoInput.value;
@@ -46,10 +46,10 @@ function addItemTodo(){
         window.alert("Please enter something!");
         return;
     }
-
+// Lägger till uppgiften som ett objekt i arrayen
     listArray.push({
-    text: todoText,
-    completed: false
+        text: todoText,
+        completed: false
 });
 
 
@@ -67,6 +67,9 @@ function addItemTodo(){
         todoItem.appendChild(textSpan);
     
     todoInput.value = "";
+
+// Flyttar uppgiften mellan To do och Completed
+// och uppdaterar statusen i arrayen
 
     const statusButton = document.createElement("button");
 
@@ -104,6 +107,7 @@ function addItemTodo(){
         })
     
         
+// Tar bort uppgiften från både HTML-listan och arrayen
 
     const deleteButton = document.createElement("button");
 
@@ -126,6 +130,7 @@ function addItemTodo(){
             
 }
 
+// Tar bort alla uppgifter och nollställer räknaren och arrayen
 
 function removeList(){
     const deleteToDo = document.getElementById("todoList");

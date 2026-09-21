@@ -12,29 +12,27 @@
 
 <h1>My ToDo-list</h1>
 
-<p id="completeCount">0 completed</p>
+<p id="counterText">0 completed</p>
 
 
 
 <label for="userInput"></label>
-<input type="text" id="userInput">
-<button type="button" id="addBtn">Add</button>
-<button type="button" id="removeBtn">Remove All</button>
+<input type="text" id="todoInput" placeholder="Enter a ToDo...">
 
+<div class="buttonContainer">
+    <button type="button" id="addBtn">Add ToDo</button>
+    <button type="button" id="removeAllBtn">Remove All</button>
+</div>
 
 
 
 <!--Listor och listitems-->
-<small>Info</small>
+<small></small>
 
 
-<h2>To do</h2>
+<h2 class="uncompletedTodo">To do</h2>
 <ul id="todoList"></ul>
-<br>
-<br>
-<br>
-<br>
-<h2>Completed</h2>
+<h2 class="completedTodo">Completed</h2>
 <ul id="completedList"></ul>
  
 
